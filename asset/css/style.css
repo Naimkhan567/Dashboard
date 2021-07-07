@@ -1,0 +1,1299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+}
+
+.main .sidebar {
+    width: 280px;
+    height: 100%;
+    padding-top: 20px;
+    transition: all 0.3s;
+    background: #FFFFFF;
+    box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
+
+}
+
+.main .sidebar.active {
+    width: 85px;
+}
+
+.main .sidebar .brand {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #EBEFF2;
+
+}
+
+.main .sidebar .brand .sidebar-brand {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #109CF1;
+    text-decoration: none;
+    padding-left: 22px;
+}
+
+.main .sidebar.active .brand .sidebar-brand {
+    padding-left: 5px;
+}
+
+.main .sidebar img {
+    margin-left: 10px;
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    padding: 10px;
+
+}
+
+.main .sidebar .title {
+    display: flex;
+    padding: 17px 0;
+}
+
+.main .sidebar .text {
+    padding-top: 9px;
+}
+
+.main .sidebar.active .text {
+    display: none;
+}
+
+.main .sidebar .text h4 {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    padding-left: 20px;
+    /* identical to box height */
+
+    /* black */
+    color: #192A3E;
+
+
+}
+
+.main .sidebar .text p {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 10px;
+    padding-left: 20px;
+    letter-spacing: 0.01em;
+    color: #90A0B7;
+
+
+}
+
+.main .sidebar .body ul:first-child {
+    padding: 15px 0;
+    padding-left: 20px;
+    border-bottom: 2px solid #EBEFF2;
+}
+
+.main .sidebar .body ul:last-child {
+    padding-left: 20px;
+}
+
+
+.main .sidebar .body li {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.main .sidebar .body li a {
+    text-decoration: none;
+    text-align: end;
+}
+
+.main .sidebar .body li a svg {
+    margin-top: 13px;
+    position: relative;
+    left: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.main .sidebar .body li a span {
+    text-decoration: none;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    color: #334D6E;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    box-sizing: border-box;
+    margin-top: -50px;
+    text-align: right;
+
+}
+
+.main .sidebar.active .body li a span {
+    display: none;
+}
+
+.main .sidebar .body li a svg {
+    margin-right: 8px;
+}
+
+.main .sidebar.active .body li a svg {
+    margin-left: 10px;
+}
+
+.main .sidebar .body li a.active {
+    color: #109CF1;
+}
+
+.main .sidebar .button {
+    position: relative;
+}
+
+.main .sidebar .button button {
+    position: absolute;
+    left: 0;
+    bottom: -180px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: #90A0B7;
+    padding-left: 20px;
+    background-color: transparent;
+    border: 0;
+
+}
+
+.main .sidebar .button button svg {
+    margin-right: 8px;
+
+}
+
+.main .sidebar.active .button button svg {
+    margin-left: 12px;
+    fill: #109CF1;
+}
+
+.main .sidebar.active .button button span {
+    display: none;
+}
+
+.main .sidebar.active .button button textarea:focus,
+.main .sidebar.active .button button input:focus {
+    outline: none;
+    border: 0;
+}
+
+
+@media only screen and (max-width: 1150px) {
+    .main .sidebar {
+        width: 170px;
+    }
+
+    .main .sidebar .title {
+        display: block;
+    }
+
+    .main .sidebar .button button {
+        position: absolute;
+        left: 0;
+        bottom: -100px;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 554px) {
+
+    .main .sidebar {
+        width: 60px;
+    }
+
+    .main .sidebar .sidebar-brand span{
+        display: none;
+    }
+
+    .main .sidebar.active {
+        width: 100%;
+    }
+
+    .main .sidebar .title {
+        display: none;
+    }
+
+    .main .sidebar.active .title {
+        display: flex;
+    }
+
+    .main .sidebar.active .text {
+        display: block;
+    }
+
+    .main .sidebar .button button span {
+        display: none;
+    }
+
+    .main .sidebar.active .button span {
+        display: block;
+        margin: auto 0;
+    }
+
+    .main .sidebar.active .body li a svg {
+        margin: 20px 0;
+        margin-left: 30px;
+    }
+
+    .main .sidebar .body li a span {
+        display: none;
+    }
+
+    .main .sidebar.active .body {
+        width: 100%;
+        height: 100%;
+    }
+
+    .main .sidebar.active .body li a span {
+        display: block;
+        padding-right: 30px;
+    }
+
+    .main .sidebar .brand .sidebar-brand {
+        padding-left: 5px;
+        text-align: left;
+    }
+
+    .main .sidebar.active .brand .sidebar-brand {
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    .main .sidebar .button button {
+        position: absolute;
+        left: 0;
+        bottom: -100px;
+    }
+
+    .main .sidebar.active .button button {
+        position: absolute;
+        left: 0;
+        bottom: -80px;
+        padding-left: 30px;
+        display: block;
+
+    }
+}
+
+@media only screen and (max-width: 402px) {
+    .main .sidebar {
+        width: 65px;
+    }
+
+    .main .sidebar .brand .sidebar-brand {
+        padding: 0 8px;
+        font-size: 20px;
+        word-wrap: break-word;
+    }
+
+    .main .sidebar .brand .sidebar-brand span {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main .main-body {
+    width: calc(100% - 280px);
+    min-height: 100%;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.main-body.active {
+    width: calc(100% - 70px);
+}
+
+.main .main-body .top-bar {
+    background: #FFFFFF;
+    display: flex;
+    padding: 18.5px 38px;
+    justify-content: space-between;
+    border-bottom: 2px solid #EBEFF2;
+
+}
+
+
+
+.main .main-body .top-bar form {
+    display: flex;
+}
+
+.main .main-body .top-bar form .btn {
+    padding-top: 5px;
+    color: #90A0B7;
+    border: 0;
+    background-color: transparent;
+}
+
+.main .main-body .top-bar form input {
+    border: 0;
+}
+
+.main .main-body .top-bar form textarea:focus,
+input:focus {
+    outline: none;
+    border: 0;
+
+}
+
+.main .main-body form input::placeholder {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    padding-left: 10px;
+    color: #90A0B7;
+
+
+}
+
+@media only screen and (max-width: 1150px) {
+
+    .main .main-body {
+        width: calc(100% - 170px);
+    }
+
+    .main .main-body.active {
+        width: calc(100% - 80px);
+    }
+
+}
+
+@media only screen and (max-width: 554px) {
+    .main .main-body {
+        width: calc(100% - 60px);
+    }
+
+    .main .main-body.active {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 402px) {
+    .main .main-body {
+        width: calc(100% - 55px);
+    }
+}
+
+
+
+
+
+
+
+
+.main .main-body .body-area {
+    background-color: #E5E5E5;
+    width: 100%;
+    height: 100%;
+    padding: 35px;
+}
+
+.main .main-body.active .body-area {
+    padding-left: 30px;
+}
+
+.main .main-body .body-area .row {
+    display: flex;
+}
+
+.main .main-body .body-area .row .col-lg-7 {
+    width: 60%;
+    height: 100%;
+}
+
+.main .main-body .body-area .row .col-lg-5 {
+    width: 40%;
+    height: 100%;
+}
+
+.main .main-body .body-area .all-task {
+    background: #FFFFFF;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+
+}
+
+.main .main-body .body-area .head {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    padding-bottom: 0;
+}
+
+.main .main-body .body-area .head h3 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #334D6E;
+
+}
+
+.main .main-body .body-area .head  a {
+    color: #109CF1;
+    text-decoration: none;
+}
+
+.main .main-body .body-area .head h6 {
+    padding-top: 6px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    color: #6A707E;
+    position: relative;
+
+
+}
+
+.main .main-body .body-area .head h6 span {
+    position: absolute;
+    top: 3px;
+    padding-left: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .main .main-body .body-area {
+        padding: 25px;
+    }
+}
+
+@media only screen and (max-width: 448px) {
+    .main .main-body .body-area {
+        padding: 10px;
+    }
+
+    .main .main-body.active .body-area {
+        padding-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 423px) {
+    .main .main-body .body-area {
+        padding: 5px;
+    }
+
+
+}
+
+
+
+
+.main .main-body .body-area .head .dropdown-toggle {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    color: #109CF1;
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+.main .main-body .body-area .head .dropdown-toggle::after {
+    color: #6A707E;
+}
+
+
+.main .main-body .body-area .progress {
+    margin: 20px 30px;
+    height: 5px;
+    background-color: #90A0B7;
+}
+
+.main .main-body .body-area .progress-bar {
+    height: 5px;
+    background-color: #2ED47A !important;
+}
+
+.main .main-body .body-area .calander {
+    padding: 10px 30px;
+}
+
+.main .main-body .body-area .calander h2 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    color: #192A3E;
+}
+
+.main .main-body .body-area .calander .date {
+    padding-top: 23px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.main .main-body .body-area .calander .date h3 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    padding: 5px;
+    color: #334D6E;
+    opacity: 0.5;
+
+}
+
+.main .main-body .body-area .calander .date .day {
+    padding: 7px 0px;
+    border-radius: 15px;
+    background-color: #109CF1;
+}
+
+.main .main-body .body-area .calander .date .day {
+    color: #FFFFFF;
+}
+
+
+
+.main .main-body .body-area .calander .date div.active h3,
+.main .main-body .body-area .calander .date div.active h4 {
+    color: #109CF1;
+    font-weight: bold;
+}
+
+.main .main-body .body-area .calander .date div:nth-child(1) {
+    padding-left: 0;
+}
+
+.main .main-body .body-area .calander .date div:nth-child(7) {
+    padding-right: 0;
+}
+
+.main .main-body .body-area .calander .date h4 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    padding: 5px;
+
+    /* profile_gray */
+    color: #4C5862;
+
+
+}
+
+.main .main-body .body-area .all-task .task-head {
+    border-bottom: 1px solid #EBEFF2;
+}
+
+
+
+
+
+
+
+.main .main-body .body-area .all-task .task-body {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    margin: 30px;
+
+}
+
+.main .main-body .body-area .all-task .task-body .head h3 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+
+    /* table_black */
+    color: #323C47;
+
+
+}
+
+.main .main-body .body-area .all-task .task-body .head a {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-decoration: none;
+    text-align: right;
+    letter-spacing: 0.01em;
+
+    /* gray */
+    color: #90A0B7;
+
+
+}
+
+.main .main-body .body-area .all-task .task-body .date {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #4C5862;
+    opacity: 0.5;
+    padding-left: 30px;
+
+}
+
+.main .main-body .body-area .all-task .task-body .date span {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #000000;
+    opacity: 1;
+
+}
+
+.main .main-body .body-area .all-task .task-body .body {
+    padding: 15px 24px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .main-body .body-area .all-task .task-body .body .image {
+    display: flex;
+}
+
+.main .main-body .body-area .all-task .task-body .body .image img {
+    max-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.main .main-body .body-area .all-task .task-body .body .image h2 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    padding-left: 15px;
+    padding-top: 10px;
+
+    /* table_gray */
+    color: #707683;
+
+
+}
+
+.main .main-body .body-area .all-task .task-body .body a {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    background-color: #2ED47A;
+    padding: 0 15px;
+    padding-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+
+
+}
+
+
+
+
+.main .main-body .body-area .all-task .task-body-2 {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    margin: 30px;
+}
+
+.main .main-body .body-area .all-task .task-body-2 .head h3 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+
+    /* table_black */
+    color: #323C47;
+
+
+}
+
+.main .main-body .body-area .all-task .task-body-2 .head a {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-decoration: none;
+    text-align: right;
+    letter-spacing: 0.01em;
+
+    /* gray */
+    color: #90A0B7;
+
+
+}
+
+.main .main-body .body-area .all-task .task-body-2 .date {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #4C5862;
+    opacity: 0.5;
+    padding-left: 30px;
+
+}
+
+.main .main-body .body-area .all-task .task-body-2 .date span {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #000000;
+    opacity: 1;
+
+}
+
+.main .main-body .body-area .all-task .task-body-2 .body {
+    padding: 15px 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .main-body .body-area .all-task .task-body-2 .body .image {
+    display: flex;
+}
+
+.main .main-body .body-area .all-task .task-body-2 .body .image img {
+    max-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.main .main-body .body-area .all-task .task-body-2 .body .image h2 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    padding-left: 15px;
+    padding-top: 10px;
+
+    /* table_gray */
+    color: #707683;
+
+
+}
+
+.main .main-body .body-area .all-task .task-body-2 .links a {
+    padding: 0 2px;
+    padding-top: 5px;
+    text-decoration: none;
+}
+
+.main .main-body .body-area .all-task .task-body-2 .links span {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    background-color: #F7685B;
+    padding: 5px 20px;
+    border-radius: 5px;
+
+}
+
+@media only screen and (max-width: 666px) {
+    .main .main-body .body-area .all-task .task-body-2 .links span {
+
+        padding: 5px 5px;
+        border-radius: 5px;
+
+    }
+}
+
+
+
+
+
+.main .main-body .body-area .all-task .task-body-3 {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    margin: 30px;
+
+}
+
+.main .main-body .body-area .all-task .task-body-3 .head h3 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+
+    /* table_black */
+    color: #323C47;
+
+
+}
+
+.main .main-body .body-area .all-task .task-body-3 .head a {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-decoration: none;
+    text-align: right;
+    letter-spacing: 0.01em;
+
+    /* gray */
+    color: #90A0B7;
+
+
+}
+
+.main .main-body .body-area .all-task .task-body-3 .date {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #4C5862;
+    opacity: 0.5;
+    padding-left: 30px;
+
+}
+
+.main .main-body .body-area .all-task .task-body-3 .date span {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #000000;
+    opacity: 1;
+
+}
+
+.main .main-body .body-area .all-task .task-body-3 .body {
+    padding: 15px 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .main-body .body-area .all-task .task-body-3 .body .image {
+    display: flex;
+}
+
+.main .main-body .body-area .all-task .task-body-3 .body .image img {
+    max-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.main .main-body .body-area .all-task .task-body-3 .body .image h2 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    padding-left: 15px;
+    padding-top: 10px;
+
+    /* table_gray */
+    color: #707683;
+
+
+}
+
+.main .main-body .body-area .all-task .task-body-3 .body a {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    background-color: #2ED47A;
+    padding: 0 15px;
+    padding-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+
+
+}
+
+
+.main .main-body .body-area .all-task .show-more {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0
+}
+
+
+.main .main-body .body-area .all-task .more {
+    text-decoration: none;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #109CF1;
+
+
+}
+
+.main .main-body .body-area .col-lg-5 .deals {
+    height: 100%;
+
+
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    margin: 30px;
+    margin-top: 0;
+    
+    margin-right: 0;
+}
+
+.main .main-body .body-area .col-lg-5 .chart {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    margin: 30px;
+    margin-right: 0
+}
+
+.main .main-body .body-area .col-lg-5 .head {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    padding-bottom: 20px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    width: 100%;
+}
+
+.main .main-body .body-area .col-lg-5 .head  h3 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #334D6E;
+
+}
+
+.main .main-body .body-area .col-lg-5 .head   a {
+    color: #109CF1;
+    text-decoration: none;
+}
+
+.main .main-body .body-area .col-lg-5 .body img {
+    width: 100%;
+    height: 100%;
+}
+
+.main .main-body .body-area .col-lg-5 .head  h6 {
+    padding-top: 6px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    color: #6A707E;
+    position: relative;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 935px) {
+    .main .main-body .body-area .row {
+        display: block;
+    }
+
+    .main .main-body .body-area .row .col-lg-7 {
+        width: 100%;
+    }
+
+    .main .main-body .body-area .row .col-lg-5 {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .main .main-body .body-area .row .col-lg-5 .deals {
+        margin-left: 0;
+    }
+
+    .main .main-body .body-area .row .col-lg-5 .chart {
+        margin-left: 0;
+    }
+}
+
+
+
+@media only screen and (max-width: 935px){
+    .main .main-body .body-area {
+        padding-left: 10px;
+        padding: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .main .main-body .body-area .all-task .task-body {
+        margin: 30px 10px;
+    }
+    .main .main-body .body-area .all-task .task-body .body {
+        padding: 15px 10px;
+    }
+    .main .main-body .body-area .all-task .task-body-2 {
+        margin: 30px 10px;
+    }
+    .main .main-body .body-area .all-task .task-body-2 .body {
+        padding: 15px 10px;
+    }
+    .main .main-body .body-area .all-task .task-body-3 {
+        margin: 30px 10px;
+    }
+    .main .main-body .body-area .all-task .task-body-3 .body {
+        padding: 15px 10px;
+    }
+
+    
+}
+
+
+
+
+
+.main .main-body .body-area .col-lg-5 .head  h6 span {
+    position: absolute;
+    top: 3px;
+    padding-left: 5px;
+}
+
+.main .main-body .body-area .col-lg-5 .body {
+    border-top: 2px solid #E5E5E5;
+    width: 100%;
+}
+
+.main .main-body .body-area .col-lg-5 .body img {
+    max-width: 100%;
+}
+
+
+@media only screen and (max-width: 458px) {
+
+    .main .main-body .body-area .all-task .task-body {
+        margin: 10px;
+
+    }
+
+    .main .main-body .body-area .all-task .task-body-2 {
+        margin: 10px;
+    }
+
+    .main .main-body .body-area .all-task .task-body-3 {
+        margin: 10px;
+    }
+}
+
+
+
+@media only screen and (max-width: 346px) {
+    .main .main-body .body-area .all-task .task-body .body a  {
+        padding: 10px 15px;
+        margin-top: 10px;
+    }
+
+    .main .main-body .body-area .all-task .task-body-3 .body {
+        text-align: center;
+    }
+    .main .main-body .body-area .all-task .task-body-3 .body a {
+        padding: 10px 15px;
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+
+
+@media only screen and (max-width: 423px) {
+    .main .main-body .body-area .all-task .task-body {
+        margin: 5px;
+
+    }
+
+    .main .main-body .body-area .all-task .task-body-2 {
+        margin: 5px;
+    }
+
+    .main .main-body .body-area .all-task .task-body-3 {
+        margin: 5px;
+    }
+
+    .main .main-body .body-area .head {
+        padding: 20px 15px;
+        padding-bottom: 0;
+    }
+
+    .main .main-body .body-area .progress {
+        margin: 20px 15px;
+        height: 5px;
+    }
+
+    .main .main-body .body-area .calander {
+        padding: 10px 10px;
+    }
+
+}
+
+
+@media only screen and (max-width: 350px) {
+    .main .main-body .body-area .all-task .task-body .body {
+        padding: 15px 24px;
+        display: block;
+    }
+
+    .main .main-body .body-area .all-task .task-body .body .image {
+        margin-bottom: 15px;
+    }
+
+    .main .main-body .body-area .all-task .task-body-2 .body {
+        padding: 15px 24px;
+        display: block;
+    }
+
+    .main .main-body .body-area .all-task .task-body-2 .body .image {
+        margin-bottom: 15px;
+    }
+
+    .main .main-body .body-area .all-task .task-body-3 .body {
+        padding: 15px 24px;
+        display: block;
+    }
+
+    .main .main-body .body-area .all-task .task-body-3 .body .image {
+        margin-bottom: 15px;
+    }
+
+    .main .main-body .top-bar {
+        background: #FFFFFF;
+        display: flex;
+        padding: 0px 38px;
+
+    }
+
+    .main .main-body .top-bar form input {
+        border: 0;
+        width: 100px;
+    }
+
+}
+
